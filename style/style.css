@@ -1,0 +1,251 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root{
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    --hue-color: 240; /* 0=red 120=green 240=blue 340=pink*/
+
+    /*HLS color*/
+    --firt-color:#c6ddec;
+    --second-color:#024873;
+    --therd-color:#012840;
+    --four-color:#011826;
+    --text-color: #9f9fc6;
+    --sectext-color:#b5d0e0;
+    --body-color: #303050;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'IBM Plex Sans', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium:500;
+    --font-SemiBold:600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    margin: 0;
+    color: var(--text-color);
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: url(/images/pexels-kai-pilger-1341279.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size)
+}
+
+.main{
+    color: var(--sectext-color);
+    text-align: center;
+    padding-top: var(--mb-3);
+}
+.container{
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.nav{
+    max-width: 2000px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+}
+.nav_item{
+    margin: 0 var(--mb-2) 0 0;
+}
+.nav_item a, .nav_logo{
+    transition: all 0.5s ease 0s;
+}
+.nav_item a:hover{
+    color: var(--firt-color);
+}
+
+.nav_item a{
+    color: var(--text-color);
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+
+.nav_logo:hover{
+    color: var(--firt-color);
+}
+
+.nav_logo{
+    color: var(--text-color);
+    animation: fadeInDown;
+    animation-duration: 1s;
+    margin-top: 1em;
+}
+
+.home-section{
+    height: 100vh;
+}
+.home-container{
+    margin: 0 var(--mb-1-5) 0 var(--mb-1-5);
+    padding: var(--mb-3) 0 var(--mb-1) 0;
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    margin: 0;
+    animation:fadeInUp;
+    animation-duration: 1.8s;
+}
+
+.about{
+    max-width: 500px;
+    text-align: center;
+    padding-top: var(--mb-3);
+}
+
+.content{
+    padding: var(--mb-2-5);
+    text-align: center;
+}
+
+.service-list{
+    margin-top: var(--mb-2-5);
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.service{
+    margin: 4rem;
+}
+
+
+.service-list ul{
+    margin-top: var(--mb-2-5);
+    margin-bottom: var(--mb-3);
+    max-width: 300px;
+}
+
+
+.layered-card{
+    padding: 10px;
+    position: relative;
+    background-color: rgba(40, 40, 70, 1);
+}
+.layered-card::before {
+    background: rgba(0, 0, 0, 0.1);
+    content: '';
+
+    /* Position */
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(1rem, 1rem);
+
+    /* Size */
+    height: 100%;
+    width: 100%;
+
+    /* Display under the main content */
+    z-index: -1;
+}
+
+.container-label{
+    /* Used to position the diagonal area */
+    position: relative;
+    max-width: 500px;
+    margin-left: 34%;
+
+}
+
+.container-diagonal {
+    /* Absolute position */
+    position: absolute;
+    top: 0;
+
+
+    /* Take full size */
+    height: 150%;
+    width: 100%;
+
+
+
+    /* Create diagonal sides */
+    transform: skewY(0deg);
+
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* Displayed under the main content */
+    z-index: -1;
+}
+
+.title{
+    padding-top: 10px;
+}
+
+.cards{
+    margin: 4rem var(--mb-2) var(--mb-2) var(--mb-2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+    gap: 20px;
+    border-radius: 50px;
+}
+
+.card__item{
+    height: 500px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.card__image{
+    width: 100%;
+    max-height: 65%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+
+.card__content{
+    padding-left: 8px;
+    padding-right: 8px;
+}
