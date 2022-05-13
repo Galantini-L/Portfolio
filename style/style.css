@@ -122,7 +122,7 @@ a {
     height: 100vh;
 }
 .home-container{
-    margin: 10rem var(--mb-1-5) 0 var(--mb-1-5);
+    margin: 5rem var(--mb-1-5) 0 var(--mb-1-5);
     padding: var(--mb-3) 0 var(--mb-1) 0;
 }
 
@@ -134,6 +134,7 @@ a {
 }
 
 .name{
+    text-align: center;
     font-size: 50px;
     font-weight: var(--font-SemiBold);
 }
