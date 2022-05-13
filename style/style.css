@@ -239,7 +239,7 @@ a {
 }
 
 .card__item{
-    height: 500px;
+    height: 400px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 5px 5px;
 }
@@ -252,6 +252,7 @@ a {
 }
 
 .card__content{
+    word-wrap: break-word;
     padding-left: 8px;
     padding-right: 8px;
 }
