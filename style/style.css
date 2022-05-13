@@ -64,7 +64,7 @@ a {
 }
 
 .header {
-    background: url(./images/pexels-kai-pilger-1341279.jpg) no-repeat;
+    background: url(../images/pexels-kai-pilger-1341279.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -148,15 +148,16 @@ a {
     text-align: center;
 }
 
+
 .service-list{
     margin-top: var(--mb-2-5);
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
 .service{
-    margin: 4rem;
+    margin: 4rem var(--mb-2) 4rem var(--mb-2);
 }
 
 
@@ -164,6 +165,7 @@ a {
     margin-top: var(--mb-2-5);
     margin-bottom: var(--mb-3);
     max-width: 300px;
+    padding: 0 var(--mb-1);
 }
 
 
@@ -193,9 +195,6 @@ a {
 .container-label{
     /* Used to position the diagonal area */
     position: relative;
-    max-width: 500px;
-    margin-left: 34%;
-
 }
 
 .container-diagonal {
@@ -227,7 +226,7 @@ a {
 .cards{
     margin: 4rem var(--mb-2) var(--mb-2) var(--mb-2);
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(12rem,1fr));
     gap: 20px;
     border-radius: 50px;
 }
@@ -248,4 +247,27 @@ a {
 .card__content{
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.contact-content{
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    /* Rounded border */
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.avatar__image {
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 }
