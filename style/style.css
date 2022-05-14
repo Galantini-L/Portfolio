@@ -95,6 +95,7 @@ a {
 }
 .nav_item{
     margin: 0 var(--mb-2) 0 0;
+    white-space: nowrap;
 }
 .nav_item a, .nav_logo{
     transition: all 0.5s ease 0s;
