@@ -244,7 +244,8 @@ a {
 
 .card__item{
     display: inline-table;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    background-color: #024873;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.68);
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -295,4 +296,9 @@ a {
 .about-text{
     max-width: 600px;
     text-align: center;
+}
+
+.card__item a{
+    display:table-footer-group;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.68);
 }
